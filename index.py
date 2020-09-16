@@ -19,16 +19,16 @@ def checkNum(num,rand):
 
 
 def guessingGame(scope,highscore,attempts,cur):
-    if int(highscore) < 10:
-        highScore=highscore
-    else:
+    if int(highscore) == 0:
         highScore=10
+    else:
+        highScore=highscore
     attempts=attempts
     scope=scope
     
     if attempts==0:
         print("Welcome to the guessing game\n")
-        print(f'The highest score is {highScore} goodluck\n')
+        print(f'The highest score is {highScore} attempt goodluck\n')
  
     if int(cur)==100:
         
@@ -54,7 +54,7 @@ def guessingGame(scope,highscore,attempts,cur):
         if attempts == 0:
             guess =input("Please enter an integer\n")
         else:
-            guess =input("Please try again integer\n")
+            guess =input("Please try again \n")
        
           
 
@@ -87,7 +87,7 @@ def guessingGame(scope,highscore,attempts,cur):
             choice = input("would you like to play again? y or n\n")
             if choice == 'y':
                 print(f'The highest score is {highScore} goodluck\n')
-                return guessingGame(3,highScore,attempts,100)
+                return guessingGame(3,highScore,0,100)
             else:
                 return print("Thanks for playing Bye :)\n")
                 sys.exit()
