@@ -51,7 +51,10 @@ def guessingGame(scope,highscore,attempts,cur):
             sys.exit()
     
     while converToInt(guess) == False:
-        guess =input("Please enter an integer\n")
+        if attempts == 0:
+            guess =input("Please enter an integer\n")
+        else:
+            guess =input("Please try again integer\n")
        
           
 
