@@ -59,12 +59,12 @@ def guessingGame(scope,highscore,attempts,cur):
           
 
     if checkNum(int(guess),randomNum)=="more":
-        print(randomNum)
+        
         print("its less than that")
         attempts+=1
         return guessingGame(3,highScore,attempts,randomNum)
     elif checkNum(int(guess),randomNum)=="less":
-        print(randomNum)
+       
         print("its more than that")
         
         attempts+=1
